@@ -11,7 +11,7 @@ Console.WriteLine("Enter customer catalog ID: ");
 string catalogId = Console.ReadLine() ?? "12345";
 
 // Create customer object
-new Customer(customerName, catalogId).DisplayCustomerInfo();
+new Customer(customerName, catalogId);
 
 
 while(true)
