@@ -1,8 +1,6 @@
 ﻿using myapplication.Classes;
-using myapplication.Classes.Customer;
 
-
-
+string input;
 Console.WriteLine("**********SHOPPING CART APPLICATION**********");
 // Create a new customer
 Console.WriteLine("Enter customer name: ");
@@ -13,6 +11,35 @@ Console.WriteLine("Enter customer catalog ID: ");
 string catalogId = Console.ReadLine() ?? "12345";
 
 // Create customer object
-new Customer(customerName, "12345").DisplayCustomerInfo();
+new Customer(customerName, catalogId).DisplayCustomerInfo();
+
+
+while(true)
+{
+    // Display interface options
+    Console.WriteLine("Select an option:");
+    Console.WriteLine("1. Add item to cart");
+    Console.WriteLine("2. Remove item from cart");
+    Console.WriteLine("3. Exit");
+
+    // Read user input
+    input = Console.ReadLine();
+
+    
+    if (input == "1")   // Add item to cart
+    {
+        Console.WriteLine("Enter item name to add to cart: ");
+    }
+    else if (input == "2") // Remove item to cart
+    {
+        Console.WriteLine("Enter item name to remove from cart: ");
+    }
+    else if (input == "3")
+    {
+        Console.WriteLine("Exiting the application. Thank you!");
+        break;
+    }
+}
+
 
 
