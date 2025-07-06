@@ -17,13 +17,7 @@ namespace myapplication.Classes
         }
         public void DisplayItemInfo()
         {
-            Console.WriteLine($"Item Name: {ItemName}");
-            Console.WriteLine($"Price: {Price:C}");
-        }
-        public void UpdatePrice(decimal newPrice)
-        {
-            Price = newPrice;
-            Console.WriteLine($"Price updated to: {Price:C}");
+            // Display item info here
         }
     }
 }
