@@ -8,7 +8,7 @@ namespace myapplication.Classes
 {
     internal class ShoppingCart
     {
-        public List<string> Items { get; set; } = new List<string>();
+        public List<string> Items { get; set; } = new List<string>(); // TODO: List needs to be list of Item objects
         public void AddItem(string item)
         {
             Items.Add(item);
@@ -28,6 +28,10 @@ namespace myapplication.Classes
             {
                 Console.WriteLine($"- {item}");
             }
+        }
+        public void WriteToFile(string filePath)
+        {
+            // Write items from the cart to a file
         }
     }
 }

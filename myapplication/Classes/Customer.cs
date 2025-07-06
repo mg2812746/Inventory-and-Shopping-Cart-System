@@ -9,7 +9,8 @@ namespace myapplication.Classes
     internal class Customer
     {
         public string Name { get; set; }
-        public string CatalogId { get; set; } = string.Empty;
+        public string CatalogId { get; set; }
+        //public ShoppingCart Cart { get; set; } = new ShoppingCart(); // needs testing
         public Customer(string name, string catalogId)
         {
             Name = name;

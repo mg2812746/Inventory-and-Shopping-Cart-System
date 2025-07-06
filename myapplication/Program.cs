@@ -13,6 +13,8 @@ string catalogId = Console.ReadLine() ?? "12345";
 // Create customer object
 new Customer(customerName, catalogId);
 
+// TODO: Read from file to get updated catalog
+
 
 while(true)
 {
@@ -38,6 +40,11 @@ while(true)
     {
         Console.WriteLine("Exiting the application. Thank you!");
         break;
+    }
+    else
+    {
+        Console.WriteLine("WTF did you enter. Try again.");
+        continue;
     }
 }
 
