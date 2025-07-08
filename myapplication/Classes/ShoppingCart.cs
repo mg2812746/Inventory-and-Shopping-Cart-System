@@ -8,27 +8,32 @@ namespace myapplication.Classes
 {
     internal class ShoppingCart
     {
-        public List<string> Items { get; set; } = new List<string>(); // TODO: List needs to be list of Item objects
-        public void AddItem(string item)
+        public List<Items> Items = new List<Items>(); // Fixed: Changed List<string> to List<Items>
+
+        public void AddItem(Items item) // Updated parameter type to Items
         {
             Items.Add(item);
         }
-        public void RemoveItem(string item)
+
+        public void RemoveItem(Items item) // Updated parameter type to Items
         {
             Items.Remove(item);
         }
+
         public void ClearCart()
         {
             Items.Clear();
         }
+
         public void DisplayItems()
         {
             Console.WriteLine("Items in the cart:");
             foreach (var item in Items)
             {
-                Console.WriteLine($"- {item}");
+                Console.WriteLine($"- {item.ItemName}, Price: {item.Price}, Discount: {item.Discount}");
             }
         }
+
         public void WriteToFile(string filePath)
         {
             // Write items from the cart to a file

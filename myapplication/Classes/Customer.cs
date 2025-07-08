@@ -9,12 +9,14 @@ namespace myapplication.Classes
     internal class Customer
     {
         public string Name { get; set; }
-        public string CatalogId { get; set; }
-        //public ShoppingCart Cart { get; set; } = new ShoppingCart(); // needs testing
-        public Customer(string name, string catalogId)
+        public ShoppingCart Cart = new ShoppingCart(); // needs testing
+        public Customer(string name)
         {
             Name = name;
-            CatalogId = catalogId;
+        }
+        public void ReadCatalog()
+        {
+            // Read customer catalog from JSON file
         }
     }
 }

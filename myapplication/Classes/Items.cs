@@ -10,10 +10,12 @@ namespace myapplication.Classes
     {
         public string ItemName { get; set; }
         public decimal Price { get; set; }
-        public Items(string itemName, decimal price)
+        public decimal Discount { get; set; }
+        public Items(string itemName, decimal price, decimal discount)
         {
             ItemName = itemName;
             Price = price;
+            Discount = discount;
         }
         public void DisplayItemInfo()
         {

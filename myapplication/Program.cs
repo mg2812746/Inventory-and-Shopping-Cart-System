@@ -6,20 +6,21 @@ Console.WriteLine("**********SHOPPING CART APPLICATION**********");
 Console.WriteLine("Enter customer name: ");
 string customerName = Console.ReadLine() ?? "Default Customer";
 
-// Get customer catalog ID
-Console.WriteLine("Enter customer catalog ID: ");
-string catalogId = Console.ReadLine() ?? "12345";
-
 // Create customer object
-Customer customer = new Customer(customerName, catalogId);
+Customer customer = new Customer(customerName);
 
-// TODO: Read from file to get updated catalog otherwise create a new one
+Items apple = new Items("Apple", 0.99m, 0.1m);
+
+customer.Cart.AddItem(apple);
+
+customer.Cart.DisplayItems();
 
 // Check if the catalog exists
-if (!File.Exists($"{customer.CatalogId}.json"))
+if (!File.Exists("Catalog.json"))
 {
-    Console.WriteLine($"Catalog file for customer {customer.CatalogId}.json not found. Creating a new catalog.");
+    Console.WriteLine($"Catalog file for customer Catalog.json not found. Creating a new catalog.");
     // Create a new catalog file
+    throw new FileNotFoundException("THERES NOTHING HERE!");
 }
 
 
