@@ -9,9 +9,14 @@ namespace myapplication.Classes
     internal class Checkout
     {
         public Checkout() { }
-        public void ProcessPayment(decimal amount)
+        public void ApplyDiscount()
+        {
+            
+        }
+        public void ProcessPayment()
         {
             // Process payment here
+            Console.WriteLine("Payment processed successfully.");
         }
     }
 }

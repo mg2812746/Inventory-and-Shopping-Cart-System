@@ -8,15 +8,6 @@ namespace myapplication.Classes
 {
     internal class Customer
     {
-        public string Name { get; set; }
         public ShoppingCart Cart = new ShoppingCart(); // needs testing
-        public Customer(string name)
-        {
-            Name = name;
-        }
-        public void ReadCatalog()
-        {
-            // Read customer catalog from JSON file
-        }
     }
 }

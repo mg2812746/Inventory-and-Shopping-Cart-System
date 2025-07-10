@@ -2,26 +2,15 @@
 
 string input;
 Console.WriteLine("**********SHOPPING CART APPLICATION**********");
-// Create a new customer
-Console.WriteLine("Enter customer name: ");
-string customerName = Console.ReadLine() ?? "Default Customer";
 
-// Create customer object
-Customer customer = new Customer(customerName);
-
-Items apple = new Items("Apple", 0.99m, 0.1m);
-
-customer.Cart.AddItem(apple);
-
-customer.Cart.DisplayItems();
-
-// Check if the catalog exists
-if (!File.Exists("Catalog.json"))
-{
-    Console.WriteLine($"Catalog file for customer Catalog.json not found. Creating a new catalog.");
-    // Create a new catalog file
-    throw new FileNotFoundException("THERES NOTHING HERE!");
-}
+Catalog catalog = new Catalog();
+Customer customer = new Customer();
+// Write the catalog from the file
+catalog.AddItem(new Items("Apple", 0.5m, 0.1m));
+catalog.AddItem(new Items("Banana", 0.3m, 0.05m));
+catalog.AddItem(new Items("Orange", 0.7m, 0.15m));
+// Display the catalog items
+catalog.DisplayCatalog();
 
 
 while (true)

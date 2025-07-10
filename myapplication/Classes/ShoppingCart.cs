@@ -34,9 +34,19 @@ namespace myapplication.Classes
             }
         }
 
-        public void WriteToFile(string filePath)
+        public void WriteCartToFile(string filePath="Cart.json")
         {
             // Write items from the cart to a file
+            try
+            {
+                // Example: Serialize Items list to JSON and write to file
+                string json = System.Text.Json.JsonSerializer.Serialize(Items);
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error writing catalog to file: {ex.Message}");
+            }
         }
     }
 }

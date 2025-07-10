@@ -17,9 +17,5 @@ namespace myapplication.Classes
             Price = price;
             Discount = discount;
         }
-        public void DisplayItemInfo()
-        {
-            // Display item info here
-        }
     }
 }
