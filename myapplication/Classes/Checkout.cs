@@ -9,9 +9,9 @@ namespace myapplication.Classes
     internal class Checkout
     {
         public Checkout() { }
-        public void ApplyDiscount()
+        public decimal ApplyDiscount(decimal discount, decimal price)
         {
-            
+            return price - (price * discount / 100);
         }
         public void ProcessPayment()
         {
